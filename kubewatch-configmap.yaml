@@ -2,13 +2,13 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: kubewatch
+  namespace: sirius-ops-develop
 data:
   .kubewatch.yaml: |
-    namespace: ""
+    namespace: "sirius-ops-develop"
     handler:
-      slack:
-        token: <token>
-        channel: <channel>
+      webhook:
+        url: "https://hooks.slack.com/services/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"
     resource:
       deployment: false
       replicationcontroller: false
